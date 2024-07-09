@@ -33,3 +33,7 @@ def water_order_page(request):
 def order_list(request):
     template = loader.get_template('order_list.html')
     return HttpResponse(template.render())
+
+def test(request):
+    template = loader.get_template('test.html')
+    return HttpResponse(template.render())
