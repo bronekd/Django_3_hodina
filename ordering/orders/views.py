@@ -35,5 +35,13 @@ def order_list(request):
     return HttpResponse(template.render())
 
 def test(request):
+    print(f"TADY JE ID: {id}")
+    template = loader.get_template('test.html')
+    return HttpResponse(template.render())
+
+def test2(request):
+    city_name = request.GET.get('city')
+    year = request.GET.get('year')
+    print(f"TADY JE ID: {city_name}")
     template = loader.get_template('test.html')
     return HttpResponse(template.render())
